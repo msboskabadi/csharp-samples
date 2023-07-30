@@ -2,10 +2,29 @@
 using OOP.Animals;
 using OOP.MyClasses;
 
+//this is forbiden for abstract class 
+//Animal animal = new();
+//Console.WriteLine("animal voice is : ");
+//animal.Voice();
 
-Animal animal = new();
-Console.WriteLine("animal voice is : ");
-animal.Voice();
+Console.WriteLine("---------");
+
+
+// this is polymorphism 
+
+List<Animal> animals = new List<Animal>();  
+Animal cat1 = new Cat(); 
+Animal dog1 = new Dog();
+Animal cow1 = new Cow();
+
+animals.Add(cat1);
+animals.Add(dog1);
+animals.Add(cow1);
+
+foreach (Animal animal in animals)
+{
+    animal.Feed();
+}
 
 Console.WriteLine("---------");
 
