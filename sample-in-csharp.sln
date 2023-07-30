@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sample-in-csharp", "sample-in-csharp\sample-in-csharp.csproj", "{7F765CFE-7066-4AF6-9003-A1D4F90FC916}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sample-in-csharp", "sample-in-csharp\sample-in-csharp.csproj", "{7F765CFE-7066-4AF6-9003-A1D4F90FC916}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP", "OOP\OOP.csproj", "{534364AD-D16B-4308-B957-574F08C34E2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP", "OOP\OOP.csproj", "{534364AD-D16B-4308-B957-574F08C34E2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessModifier", "AccessModifier\AccessModifier.csproj", "{F6384F6B-9638-40AC-9E1F-0DB7860B35CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{534364AD-D16B-4308-B957-574F08C34E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{534364AD-D16B-4308-B957-574F08C34E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{534364AD-D16B-4308-B957-574F08C34E2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6384F6B-9638-40AC-9E1F-0DB7860B35CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6384F6B-9638-40AC-9E1F-0DB7860B35CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6384F6B-9638-40AC-9E1F-0DB7860B35CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6384F6B-9638-40AC-9E1F-0DB7860B35CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
