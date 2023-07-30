@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using AccessModifier;
+using OOP;
 using OOP.Animals;
 using OOP.Constructor;
 using OOP.MyClasses;
@@ -66,5 +67,10 @@ Mobile mobile = new Mobile();
 
 PublicSample publicSample = new PublicSample();
 publicSample.Name = "mohammad sajjad boskabadi";
+
+using(MyDisposable sample = new MyDisposable())
+{
+
+}
 
 Console.ReadKey();
