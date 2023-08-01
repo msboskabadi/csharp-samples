@@ -55,4 +55,24 @@ namespace Generics
     {
         public int Id { get; set; }
     }
+
+    // inheritance in .net
+    public class Parent<TInput01, TInput02>
+    {
+
+    }
+
+    public class Child01 : Parent<int, string>
+    {
+
+    }
+
+    public class Child02<TInput02> : Parent<int, TInput02>
+    {
+
+    }
+    public class Child03<TInput01, TInput02> : Parent<TInput01, TInput02>
+    {
+
+    }
 }
