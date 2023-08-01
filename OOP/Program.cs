@@ -68,9 +68,18 @@ Mobile mobile = new Mobile();
 PublicSample publicSample = new PublicSample();
 publicSample.Name = "mohammad sajjad boskabadi";
 
-using(MyDisposable sample = new MyDisposable())
-{
+//using(MyDisposable sample = new MyDisposable())
+//{
 
-}
+//}
+
+MyFirstInterfaceImplement impliment = new MyFirstInterfaceImplement();
+impliment.ExplicitTemp();
+
+
+// access by interface
+IMyFirstInterface implimentBuffer = impliment;
+implimentBuffer.ExplicitTest();
+
 
 Console.ReadKey();
