@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP", "OOP\OOP.csproj", "{5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessModifier", "AccessModifier\AccessModifier.csproj", "{F6384F6B-9638-40AC-9E1F-0DB7860B35CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "Generics\Generics.csproj", "{37DE76B9-000E-4444-962F-2659C1BEDF1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generics", "Generics\Generics.csproj", "{37DE76B9-000E-4444-962F-2659C1BEDF1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Operators", "Operators\Operators.csproj", "{C6D87C33-F6D4-497A-9BC6-138181464212}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{37DE76B9-000E-4444-962F-2659C1BEDF1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37DE76B9-000E-4444-962F-2659C1BEDF1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37DE76B9-000E-4444-962F-2659C1BEDF1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6D87C33-F6D4-497A-9BC6-138181464212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6D87C33-F6D4-497A-9BC6-138181464212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6D87C33-F6D4-497A-9BC6-138181464212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6D87C33-F6D4-497A-9BC6-138181464212}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

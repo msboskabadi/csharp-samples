@@ -75,4 +75,9 @@ namespace Generics
     {
 
     }
+
+    public class StaticParam<T>
+    {
+        public static int Counter;
+    }
 }
