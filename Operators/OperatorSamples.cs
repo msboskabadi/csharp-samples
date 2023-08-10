@@ -25,7 +25,7 @@ namespace Operators
                     Console.WriteLine(b);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Console.WriteLine("has error occurred");   
             }
