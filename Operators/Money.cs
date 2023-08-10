@@ -17,5 +17,12 @@ namespace Operators
 
         public int Add(Money inputMoney)
             => _value + inputMoney.Value;   
+
+        public static Money operator +(Money right, Money left)=>
+            new Money(left.Value + right.Value);
+
+        public static Money operator -(Money right, Money left) =>
+            new Money(left.Value - right.Value);
+
     }
 }
