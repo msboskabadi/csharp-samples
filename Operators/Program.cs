@@ -42,4 +42,19 @@ Console.WriteLine(sum02);
 var sum03 = money01 + money02;
 Console.WriteLine($"this operator overloading {sum03.Value}");
 
+
+var equalityRef01 = new Money(10000);
+var equalityRef02 = new Money(10000);
+
+Console.WriteLine($"are two object equal {equalityRef01 == equalityRef02}");
+Console.WriteLine($"are two ref object equal {object.ReferenceEquals(equalityRef01, equalityRef02)}");
+Console.WriteLine($"are two ref object equal {equalityRef01.Equals(equalityRef02)}");
+
+
+var test01 = new Wallet();
+test01[0, "0910173532"] = new Money(10000);
+test01[1, "0910173532"] = new Money(20000);
+
+Console.WriteLine(test01[0, "0910173532"].Value);
+
 Console.ReadKey();
