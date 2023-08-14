@@ -67,6 +67,8 @@ namespace Operators
         public static bool operator  != (Money right, Money left) =>
             !(left.Value == right.Value);
 
-
+        public static implicit operator int(Money value) => value.Value;
+        
+        public static implicit operator Money(int value) => new Money(value);
     }
 }

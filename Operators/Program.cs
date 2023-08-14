@@ -54,7 +54,13 @@ Console.WriteLine($"are two ref object equal {equalityRef01.Equals(equalityRef02
 var test01 = new Wallet();
 test01[0, "0910173532"] = new Money(10000);
 test01[1, "0910173532"] = new Money(20000);
+test01[1, "0910173532"] = 300000;
 
 Console.WriteLine(test01[0, "0910173532"].Value);
+
+
+
+
+
 
 Console.ReadKey();
