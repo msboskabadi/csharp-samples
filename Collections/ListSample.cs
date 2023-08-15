@@ -47,5 +47,10 @@ namespace Collections
             var result = lst.Find(x => x.StartsWith("s")); // single
             var result01 = lst.FindAll(x => x.StartsWith("sa")); // list
         }
+
+        public IReadOnlyList<string> GetReadOnly()
+        {
+            return lst.AsReadOnly();
+        }
     }
 }
