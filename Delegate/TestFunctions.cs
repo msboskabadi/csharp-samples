@@ -113,5 +113,19 @@ namespace Delegate
                 return $"{x} and {y}";
             };
         }
+
+        public void TestClosure()
+        {
+            int localVariable = 1;
+
+            Func<int, int> func = x =>
+            {
+                return x + localVariable;
+            };
+
+            localVariable = 100;
+
+            func(1);
+        }
     }
 }
