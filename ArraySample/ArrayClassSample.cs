@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace ArraySample
 {
-    internal class ArrayClassSample : IEnumerator, Enumerable
+    //internal class ArrayClassSample : IEnumerator
+    internal class ArrayClassSample : IEnumerator
     {
         public object Current => throw new NotImplementedException();
 
