@@ -8,5 +8,7 @@ namespace Collections
 {
     public class StackSample
     {
+
+        // push and pop
     }
 }
