@@ -14,7 +14,42 @@ using Collections;
 
 //lst01.PrintCountAndCapacity();
 
-QueueSample test = new QueueSample();
+//QueueSample sample = new QueueSample();
+
+//sample.Count();
+//sample.Enqueue("01");
+//sample.Enqueue("02");
+//sample.Enqueue("03");
+//sample.Count();
+
+
+//Console.ReadKey();
+
+//Console.WriteLine(sample.Peek());
+//sample.Count();
+//Console.WriteLine(sample.Peek());
+//sample.Count();
+//Console.WriteLine(sample.Peek());
+//sample.Count();
+
+//Console.ReadKey();
+
+
+//Console.WriteLine(sample.Dequeue());
+//sample.Count();
+//Console.WriteLine(sample.Dequeue());
+//sample.Count();
+//Console.WriteLine(sample.Dequeue());
+//sample.Count();
+
+//Console.ReadKey();
+
+
+Console.WriteLine("--------------");
+
+PriorityQueueSample ps = new PriorityQueueSample();
+
+ps.AddWithSamePriority();
 
 Console.ReadKey();
 

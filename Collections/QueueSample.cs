@@ -15,9 +15,19 @@ namespace Collections
             queue.Enqueue(input);   
         }
 
-        //public void Dequeue(string input)
-        //{
-        //    queue.Dequeue(input);
-        //}
+        public string Peek()
+        {
+            return queue.Peek();
+        }
+
+        public string Dequeue()
+        {
+            return queue.Dequeue(); 
+        }
+
+        public void Count()
+        {
+            Console.WriteLine($"count of queue is {queue.Count}");
+        }
     }
 }
