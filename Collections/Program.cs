@@ -3,16 +3,18 @@
 
 using Collections;
 
-List<string> lst = new List<string>();
+//List<string> lst = new List<string>();
 
 
-ListSample lst01 = new ListSample();
+//ListSample lst01 = new ListSample();
 
-lst01.PrintCountAndCapacity();
+//lst01.PrintCountAndCapacity();
 
-lst01.AddMember("this is first test");
+//lst01.AddMember("this is first test");
 
-lst01.PrintCountAndCapacity();
+//lst01.PrintCountAndCapacity();
+
+QueueSample test = new QueueSample();
 
 Console.ReadKey();
 
