@@ -51,6 +51,10 @@ PriorityQueueSample ps = new PriorityQueueSample();
 
 ps.AddWithSamePriority();
 
+Console.WriteLine("--------------");
+
+ps.AddWithDiffrentPriority();
+
 Console.ReadKey();
 
 

@@ -13,8 +13,18 @@ namespace Collections
         public void AddWithSamePriority()
         {
             priorityQueue00.Enqueue("1", 1);
+            priorityQueue00.Enqueue("2", 1);
+            priorityQueue00.Enqueue("3", 1);
+
+            Console.WriteLine(priorityQueue00.Dequeue());
+            Console.WriteLine(priorityQueue00.Dequeue());
+            Console.WriteLine(priorityQueue00.Dequeue());
+        }
+        public void AddWithDiffrentPriority()
+        {
+            priorityQueue00.Enqueue("1", 3);
             priorityQueue00.Enqueue("2", 2);
-            priorityQueue00.Enqueue("3", 3);
+            priorityQueue00.Enqueue("3", 9);
 
             Console.WriteLine(priorityQueue00.Dequeue());
             Console.WriteLine(priorityQueue00.Dequeue());
