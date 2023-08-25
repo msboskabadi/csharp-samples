@@ -45,16 +45,21 @@ using Collections;
 //Console.ReadKey();
 
 
-Console.WriteLine("--------------");
+//Console.WriteLine("--------------");
 
-PriorityQueueSample ps = new PriorityQueueSample();
+//PriorityQueueSample ps = new PriorityQueueSample();
 
-ps.AddWithSamePriority();
+//ps.AddWithSamePriority();
 
-Console.WriteLine("--------------");
+//Console.WriteLine("--------------");
 
-ps.AddWithDiffrentPriority();
+//ps.AddWithDiffrentPriority();
 
+SortedListSample sample = new SortedListSample();
+
+sample.Add(1, "1");
+sample.Add(2, "2");
+// sample.Add(1, "3"); Error
 Console.ReadKey();
 
 
