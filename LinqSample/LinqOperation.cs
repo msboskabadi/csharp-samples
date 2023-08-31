@@ -79,5 +79,30 @@ namespace LinqSample
             }
 
         }
+
+
+        public void PrintNumbersDiferred()
+        {
+            List<int> Numbers = new List<int>
+            {
+                1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
+            };
+
+            var lessThan10 = from num in Numbers where num < 10  select num;
+
+            foreach (var item in lessThan10)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("*************");
+            Numbers.Add(3);
+            Numbers.Add(5);
+
+            foreach (var item in lessThan10)
+            {
+                Console.WriteLine(item);
+            }
+        }
     }
 }
