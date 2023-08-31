@@ -128,5 +128,30 @@ namespace LinqSample
                 Console.WriteLine(item);
             }
         }
+
+        public void StudentFilterQuery()
+        {
+            var students = Student.GetStudents();
+
+            var result = (from student in students where student.Grade > 15 select student).ToList();
+            Student.PrintFilterStudent(result);
+        }
+
+        public void StudentFilterMethod()
+        {
+            var students = Student.GetStudents();
+
+            var result = students.Where((q, index) => q.Grade > 15 || q.Grade < index).ToList();
+
+            Student.PrintFilterStudent(result);
+        }
+
+        public void FilterByType()
+        {
+            List<object> list = new List<object> { 1, 2, 3, "sajjad", "hasan", true, 84984 };
+            var numbers = list.OfType<int>().ToList();  
+            foreach(var item in numbers)
+                Console.WriteLine(item);
+        }
     }
 }
