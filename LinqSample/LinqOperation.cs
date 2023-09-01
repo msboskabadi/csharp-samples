@@ -296,5 +296,15 @@ namespace LinqSample
             foreach(var item in res)
                 Console.WriteLine(item.Id);
         }
+
+        public void Pagination(int pageIndex = 0, int pageCount = 3)
+        {
+            List<int> lst = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
+            
+            var res = lst.Skip(pageIndex * pageCount).Take(pageCount);
+
+            foreach(var item in res)
+                Console.WriteLine(item);
+        }
     }
 }
