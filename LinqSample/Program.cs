@@ -5,7 +5,10 @@ using LinqSample;
 
 LinqOperation sample = new LinqOperation();
 
-sample.InnerJoin();
+sample.LeftJoin();
+
+sample.GroupJoin();
+
 
 Console.ReadKey();
 

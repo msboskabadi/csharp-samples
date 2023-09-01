@@ -158,7 +158,7 @@ namespace LinqSample
         {
             var students = Student.GetStudents();
 
-            var sortedStudent = students.OrderBy(c => c.Name).ToList();
+            var sortedStudent = students.OrderBy(c => c.FirstName).ToList();
             Student.PrintFilterStudent(sortedStudent);
         }
 
@@ -167,7 +167,7 @@ namespace LinqSample
         {
             var students = Student.GetStudents();
 
-            var sortedStudent = students.OrderBy(c => c.Grade).ThenBy(c => c.Name).ToList();
+            var sortedStudent = students.OrderBy(c => c.Grade).ThenBy(c => c.FirstName).ToList();
             Student.PrintFilterStudent(sortedStudent);
         }
 
@@ -175,7 +175,7 @@ namespace LinqSample
         {
             var students = Student.GetStudents();
 
-            var sortedStudent = students.OrderByDescending(c => c.Name).ToList();
+            var sortedStudent = students.OrderByDescending(c => c.FirstName).ToList();
             Student.PrintFilterStudent(sortedStudent);
         }
 
@@ -190,7 +190,7 @@ namespace LinqSample
                 Console.WriteLine(item.Key);
 
                 foreach(var student in item)
-                    Console.WriteLine(student.Name);
+                    Console.WriteLine(student.FirstName);
                 Console.WriteLine(item);
             }
         }
@@ -205,7 +205,7 @@ namespace LinqSample
                      {
                          StudentId = s.Id,
                          CourseId = c.Id,
-                         StudentName = s.Name,
+                         StudentName = s.FirstName,
                          c.Name,
                          c.Score
                      }
@@ -226,14 +226,53 @@ namespace LinqSample
             new
             {
                 s.Id,
-                s.Name,
+                s.FirstName,
                 s.Grade,
                 StuCourse = c
             }).ToList();
 
             foreach(var item in groupJoin)
             {
-                Console.WriteLine($"{item.Name}-{item.StuCourse?.Count()}");
+                Console.WriteLine($"{item.FirstName}-{item.StuCourse?.Count()}");
+
+                //foreach(var detailCourse in item.StuCourse)
+                //{
+                //    Console.WriteLine(detailCourse.Score);
+                //}
+            }
+        }
+
+
+        public void LeftJoin()
+        {
+            var students = Student.GetStudents();
+            var courses = StudentCourse.GetStudentCourses();
+
+            var leftJoin = students.GroupJoin(courses, s => s.Id, c => c.StudentId, (s, c) =>
+            new
+            {
+                s.Id,
+                s.FirstName,
+                s.LastName,
+                s.Grade,
+                StuCourse = c
+            }).SelectMany(c=>c.StuCourse.DefaultIfEmpty(), (s,c)=>
+            {
+                return new
+                {
+                    s.Id,
+                    s.FirstName,
+                    s.LastName,
+                    s.Grade,
+                    courseName = c?.Name ?? "----",
+                    courseScore = c?.Score ?? 0
+                };
+            }
+            ).ToList();
+
+            foreach (var item in leftJoin)
+            {
+                Console.WriteLine($"{item.FirstName}-{item.courseName}-{item.courseScore}");
 
                 //foreach(var detailCourse in item.StuCourse)
                 //{

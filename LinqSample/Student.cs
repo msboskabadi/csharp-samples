@@ -30,21 +30,21 @@ namespace LinqSample
     public class Student
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Grade { get; set; }
 
         public static List<Student> GetStudents() =>
             new List<Student>
             {
-                new Student { Id = 1, Name = "arshia", LastName = "saremi", Grade = 10},
-                new Student { Id = 2, Name = "sajjad", LastName = "boskabadi", Grade = 20},
-                new Student { Id = 3, Name = "sina", LastName = "hemati", Grade = 12},
-                new Student { Id = 4, Name = "ahmad", LastName = "mahboubi", Grade = 14},
-                new Student { Id = 5, Name = "hasan", LastName = "sahbi", Grade = 8},
-                new Student { Id = 6, Name = "arman", LastName = "kazemi", Grade = 16},
-                new Student { Id = 7, Name = "sonhan", LastName = "hemati", Grade = 12},
-                new Student { Id = 8, Name = "amir mohammad", LastName = "usefi", Grade = 12}
+                new Student { Id = 1, FirstName = "arshia", LastName = "saremi", Grade = 10},
+                new Student { Id = 2, FirstName = "sajjad", LastName = "boskabadi", Grade = 20},
+                new Student { Id = 3, FirstName = "sina", LastName = "hemati", Grade = 12},
+                new Student { Id = 4, FirstName = "ahmad", LastName = "mahboubi", Grade = 14},
+                new Student { Id = 5, FirstName = "hasan", LastName = "sahbi", Grade = 8},
+                new Student { Id = 6, FirstName = "arman", LastName = "kazemi", Grade = 16},
+                new Student { Id = 7, FirstName = "sonhan", LastName = "hemati", Grade = 12},
+                new Student { Id = 8, FirstName = "amir mohammad", LastName = "usefi", Grade = 12}
             };
 
         public static void PrintFilterStudent(List<Student> st)
