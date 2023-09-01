@@ -1,5 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+
+
+using LinqSample;
+
+LinqOperation sample = new LinqOperation();
+
+sample.GroupStudents();
+
+Console.ReadKey();
+
 
 
 

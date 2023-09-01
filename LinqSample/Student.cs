@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace LinqSample
 {
+    pb
+
     public class Student
     {
         public int Id { get; set; }
@@ -23,7 +25,7 @@ namespace LinqSample
                 new Student { Id = 1, Name = "hasan", LastName = "sahbi", Grade = 8},
                 new Student { Id = 1, Name = "arman", LastName = "kazemi", Grade = 16},
                 new Student { Id = 1, Name = "sonhan", LastName = "hemati", Grade = 12},
-                new Student { Id = 1, Name = "amir mohammad", LastName = "usefi", Grade = 9}
+                new Student { Id = 1, Name = "amir mohammad", LastName = "usefi", Grade = 12}
             };
 
         public static void PrintFilterStudent(List<Student> st)

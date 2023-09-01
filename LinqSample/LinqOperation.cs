@@ -178,5 +178,21 @@ namespace LinqSample
             var sortedStudent = students.OrderByDescending(c => c.Name).ToList();
             Student.PrintFilterStudent(sortedStudent);
         }
+
+        public void GroupStudents()
+        {
+            var students = Student.GetStudents();
+
+            var groupByGrade = students.GroupBy(q => q.Grade).ToList();
+
+            foreach (var item in groupByGrade)
+            {
+                Console.WriteLine(item.Key);
+
+                foreach(var student in item)
+                    Console.WriteLine(student.Name);
+                Console.WriteLine(item);
+            }
+        }
     }
 }
