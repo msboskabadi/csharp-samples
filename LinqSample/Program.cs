@@ -5,7 +5,7 @@ using LinqSample;
 
 LinqOperation sample = new LinqOperation();
 
-sample.GroupStudents();
+sample.InnerJoin();
 
 Console.ReadKey();
 

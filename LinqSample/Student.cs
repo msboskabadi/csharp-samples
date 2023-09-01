@@ -6,7 +6,26 @@ using System.Threading.Tasks;
 
 namespace LinqSample
 {
-    pb
+    public class StudentCourse 
+    {
+        public int Id { get; set; }
+        public int StudentId { get; set; }
+        public string Name { get; set; }
+        public int Score { get; set; }
+
+        public static List<StudentCourse> GetStudentCourses() =>
+            new List<StudentCourse>
+            {
+                new StudentCourse { Id = 1, StudentId = 2, Name = "SQL Server", Score = 9 },
+                new StudentCourse { Id = 2, StudentId = 3, Name = "Asp.NET", Score = 7 },
+                new StudentCourse { Id = 3, StudentId = 4, Name = "Django", Score = 8 },
+                new StudentCourse { Id = 4, StudentId = 5, Name = "Python", Score = 9 },
+                new StudentCourse { Id = 5, StudentId = 2, Name = "Mongo DB", Score = 10 },
+                new StudentCourse { Id = 6, StudentId = 2, Name = "Redis", Score = 4 },
+                new StudentCourse { Id = 7, StudentId = 7, Name = "Postgre SQL", Score = 5 },
+                new StudentCourse { Id = 8, StudentId = 3, Name = "Laravel", Score = 10 }
+            };
+    }
 
     public class Student
     {
@@ -19,13 +38,13 @@ namespace LinqSample
             new List<Student>
             {
                 new Student { Id = 1, Name = "arshia", LastName = "saremi", Grade = 10},
-                new Student { Id = 1, Name = "sajjad", LastName = "boskabadi", Grade = 20},
-                new Student { Id = 1, Name = "sina", LastName = "hemati", Grade = 12},
-                new Student { Id = 1, Name = "ahmad", LastName = "mahboubi", Grade = 14},
-                new Student { Id = 1, Name = "hasan", LastName = "sahbi", Grade = 8},
-                new Student { Id = 1, Name = "arman", LastName = "kazemi", Grade = 16},
-                new Student { Id = 1, Name = "sonhan", LastName = "hemati", Grade = 12},
-                new Student { Id = 1, Name = "amir mohammad", LastName = "usefi", Grade = 12}
+                new Student { Id = 2, Name = "sajjad", LastName = "boskabadi", Grade = 20},
+                new Student { Id = 3, Name = "sina", LastName = "hemati", Grade = 12},
+                new Student { Id = 4, Name = "ahmad", LastName = "mahboubi", Grade = 14},
+                new Student { Id = 5, Name = "hasan", LastName = "sahbi", Grade = 8},
+                new Student { Id = 6, Name = "arman", LastName = "kazemi", Grade = 16},
+                new Student { Id = 7, Name = "sonhan", LastName = "hemati", Grade = 12},
+                new Student { Id = 8, Name = "amir mohammad", LastName = "usefi", Grade = 12}
             };
 
         public static void PrintFilterStudent(List<Student> st)

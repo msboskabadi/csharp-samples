@@ -194,5 +194,52 @@ namespace LinqSample
                 Console.WriteLine(item);
             }
         }
+
+        public void InnerJoin()
+        {
+            var students = Student.GetStudents();
+            var courses = StudentCourse.GetStudentCourses();
+
+            var result = students.Join(courses, s => s.Id, c => c.StudentId, (s, c) =>
+                     new
+                     {
+                         StudentId = s.Id,
+                         CourseId = c.Id,
+                         StudentName = s.Name,
+                         c.Name,
+                         c.Score
+                     }
+            );
+
+            foreach(var item in result)
+            {
+                Console.WriteLine($"{item.StudentName} {item.Name}={item.Score}");
+            }
+        }
+
+        public void GroupJoin()
+        {
+            var students = Student.GetStudents();
+            var courses = StudentCourse.GetStudentCourses();
+
+            var groupJoin = students.GroupJoin(courses, s => s.Id, c => c.StudentId, (s, c) =>
+            new
+            {
+                s.Id,
+                s.Name,
+                s.Grade,
+                StuCourse = c
+            }).ToList();
+
+            foreach(var item in groupJoin)
+            {
+                Console.WriteLine($"{item.Name}-{item.StuCourse?.Count()}");
+
+                //foreach(var detailCourse in item.StuCourse)
+                //{
+                //    Console.WriteLine(detailCourse.Score);
+                //}
+            }
+        }
     }
 }
