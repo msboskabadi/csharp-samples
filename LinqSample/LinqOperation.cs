@@ -153,5 +153,30 @@ namespace LinqSample
             foreach(var item in numbers)
                 Console.WriteLine(item);
         }
+
+        public void SortStudents()
+        {
+            var students = Student.GetStudents();
+
+            var sortedStudent = students.OrderBy(c => c.Name).ToList();
+            Student.PrintFilterStudent(sortedStudent);
+        }
+
+
+        public void SortGradeAndNameStudents()
+        {
+            var students = Student.GetStudents();
+
+            var sortedStudent = students.OrderBy(c => c.Grade).ThenBy(c => c.Name).ToList();
+            Student.PrintFilterStudent(sortedStudent);
+        }
+
+        public void SortDescStudents()
+        {
+            var students = Student.GetStudents();
+
+            var sortedStudent = students.OrderByDescending(c => c.Name).ToList();
+            Student.PrintFilterStudent(sortedStudent);
+        }
     }
 }
