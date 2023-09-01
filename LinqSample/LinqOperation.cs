@@ -280,5 +280,21 @@ namespace LinqSample
                 //}
             }
         }
+
+        public void ExceptBy()
+        {
+            List<StudentCourse> lst = new List<StudentCourse>
+            {
+                new StudentCourse { Id = 1},
+                new StudentCourse { Id = 2},
+                new StudentCourse { Id = 3},
+                new StudentCourse { Id = 3},
+                new StudentCourse { Id = 4},
+            };
+
+            var res = lst.ExceptBy(new int[] { 2, 3 }, sc => sc.Id);
+            foreach(var item in res)
+                Console.WriteLine(item.Id);
+        }
     }
 }

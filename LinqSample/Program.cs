@@ -5,9 +5,11 @@ using LinqSample;
 
 LinqOperation sample = new LinqOperation();
 
-sample.LeftJoin();
+//sample.LeftJoin();
 
-sample.GroupJoin();
+//sample.GroupJoin();
+
+sample.ExceptBy();
 
 
 Console.ReadKey();
