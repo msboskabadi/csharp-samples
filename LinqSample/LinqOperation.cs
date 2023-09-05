@@ -315,6 +315,15 @@ namespace LinqSample
 
             Console.Write(res);
         }
+
+        public void Generators()
+        {
+            var numberRange = Enumerable.Range(0, 100).ToList();
+
+            var numberEmpty = Enumerable.Empty<int>().ToList();
+
+            var numberRepeat = Enumerable.Repeat<int>(1, 100);
+        }
         
     }
 }
