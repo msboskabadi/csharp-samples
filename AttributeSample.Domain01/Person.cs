@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace AttributeSample.Domain01;
 
+[DebuggerDisplay("Person Name is {FirstName} and Famly is {LastName}")]
+[DebuggerTypeProxy(typeof(PersonDebuggerProxy))]
 public class Person
 {
+    [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public int Age  { get; set; }
