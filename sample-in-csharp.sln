@@ -29,6 +29,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AttributeSample.Domain01", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyInfo", "AssemblyInfo\AssemblyInfo.csproj", "{C60E8688-6CD3-4949-B15E-15FC16E078A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomeAttribute", "CustomeAttribute\CustomeAttribute.csproj", "{2D15B63F-0780-4C7C-BC93-DACAC9703E01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomeAttributeLib", "CustomeAttributeLib\CustomeAttributeLib.csproj", "{775213BB-27F6-4D72-BDC9-326212838D3C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{C60E8688-6CD3-4949-B15E-15FC16E078A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C60E8688-6CD3-4949-B15E-15FC16E078A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C60E8688-6CD3-4949-B15E-15FC16E078A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D15B63F-0780-4C7C-BC93-DACAC9703E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D15B63F-0780-4C7C-BC93-DACAC9703E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D15B63F-0780-4C7C-BC93-DACAC9703E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D15B63F-0780-4C7C-BC93-DACAC9703E01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{775213BB-27F6-4D72-BDC9-326212838D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{775213BB-27F6-4D72-BDC9-326212838D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{775213BB-27F6-4D72-BDC9-326212838D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{775213BB-27F6-4D72-BDC9-326212838D3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

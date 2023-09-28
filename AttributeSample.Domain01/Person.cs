@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.ComponentModel.DataAnnotations;
+using CustomeAttributeLib;
 
 namespace AttributeSample.Domain01;
 
 [DebuggerDisplay("Person Name is {FirstName} and Famly is {LastName}")]
 [DebuggerTypeProxy(typeof(PersonDebuggerProxy))]
+
 public class Person
 {
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
@@ -20,6 +22,7 @@ public class Person
     public int Age  { get; set; }
 }
 
+[AutoScanForDependencyFor]
 public class PersonPrinter
 {
     private readonly Person _person;
