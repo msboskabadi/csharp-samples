@@ -1,6 +1,5 @@
-﻿
+﻿using AttributeSample.Domain01;
 
-using AttributeSample.Domain01;
 
 Person Person = new Person()
 {

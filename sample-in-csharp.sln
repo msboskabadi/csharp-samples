@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionSamples", "Excepti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqSample", "LinqSample\LinqSample.csproj", "{ABFD6BD0-B768-4805-A2EF-A1EFA6037291}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeSample.UI", "AttributeSample.UI\AttributeSample.UI.csproj", "{B507F30C-8E60-4681-B79F-965A82D6E90C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AttributeSample.UI", "AttributeSample.UI\AttributeSample.UI.csproj", "{B507F30C-8E60-4681-B79F-965A82D6E90C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeSample.Domain01", "AttributeSample.Domain01\AttributeSample.Domain01.csproj", "{A0E7E013-7FDB-4250-95AD-316D395FD56F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AttributeSample.Domain01", "AttributeSample.Domain01\AttributeSample.Domain01.csproj", "{A0E7E013-7FDB-4250-95AD-316D395FD56F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyInfo", "AssemblyInfo\AssemblyInfo.csproj", "{C60E8688-6CD3-4949-B15E-15FC16E078A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{A0E7E013-7FDB-4250-95AD-316D395FD56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0E7E013-7FDB-4250-95AD-316D395FD56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0E7E013-7FDB-4250-95AD-316D395FD56F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C60E8688-6CD3-4949-B15E-15FC16E078A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C60E8688-6CD3-4949-B15E-15FC16E078A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C60E8688-6CD3-4949-B15E-15FC16E078A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C60E8688-6CD3-4949-B15E-15FC16E078A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

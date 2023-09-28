@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.ComponentModel.DataAnnotations;
 
 namespace AttributeSample.Domain01;
 
@@ -12,7 +13,9 @@ namespace AttributeSample.Domain01;
 public class Person
 {
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+    [Required]
     public string FirstName { get; set; }
+    [StringLength(100)]
     public string LastName { get; set; }
     public int Age  { get; set; }
 }
@@ -28,9 +31,13 @@ public class PersonPrinter
 
     public void Print()
     {
+        ShowDebugData();
         PrintFullName();
         PrintAge();
     }
+
+    [Conditional("DEBUG")]
+    private void ShowDebugData() => Console.WriteLine("this code compiled by debug mode");
 
     public void PrintAge()
     {
