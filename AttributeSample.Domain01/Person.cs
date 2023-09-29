@@ -14,6 +14,11 @@ namespace AttributeSample.Domain01;
 
 public class Person
 {
+
+    public Person()
+    {
+
+    }
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
     [Required]
     public string FirstName { get; set; }
