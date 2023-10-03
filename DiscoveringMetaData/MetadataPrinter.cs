@@ -19,13 +19,13 @@ namespace DiscoveringMetaData
             PrintMainInfo();
             PrintMethodInfo();
             PrintPropertyInfo();
-            PrintFieldInfo();
+            //PrintFieldInfo();
         }
 
-        private void PrintFieldInfo()
-        {
-            throw new NotImplementedException();
-        }
+        //private void PrintFieldInfo()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         private void PrintPropertyInfo()
         {

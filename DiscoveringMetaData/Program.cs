@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using DiscoveringMetaData;
+
+var intPrinter = new MetadataPrinter(typeof(int));
+
+intPrinter.Print();
+
+Console.ReadKey();
