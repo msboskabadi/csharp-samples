@@ -49,5 +49,18 @@ namespace ADOSamples
             Console.WriteLine(connection.CommandTimeout);
             Console.WriteLine(connection.CommandTimeout);
         }
+
+        public void ConnectionBuilder()
+        {
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.InitialCatalog = "OnlineShopDb";
+            builder.DataSource = ".";
+            builder.Password = "0910173532";
+            builder.UserID = "sa";
+            builder.Encrypt = false;
+            builder.ConnectTimeout = 100;
+            builder.CommandTimeout = 200;
+            SqlConnection connection = new(builder.ConnectionString);
+        }
     }
 }
