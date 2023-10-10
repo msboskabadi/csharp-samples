@@ -10,6 +10,19 @@ namespace ADOSamples
 {
     public class SqlSamples
     {
+        private SqlConnection connection;
+        public SqlSamples()
+        {
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.InitialCatalog = "OnlineShopDb";
+            builder.DataSource = ".";
+            builder.Password = "0910173532";
+            builder.UserID = "sa";
+            builder.Encrypt = false;
+            builder.ConnectTimeout = 100;
+            builder.CommandTimeout = 200;
+            connection = new(builder.ConnectionString);
+        }
         public void FirstSample()
         {
             var ConnectionString = "Server=.; Database= OnlineShopDb; User Id=sa; Password=0910173532; Encrypt=False";
@@ -61,6 +74,51 @@ namespace ADOSamples
             builder.ConnectTimeout = 100;
             builder.CommandTimeout = 200;
             SqlConnection connection = new(builder.ConnectionString);
+        }
+
+        public void TestCommand()
+        {
+            SqlCommand command = new SqlCommand
+            {
+                Connection = connection,
+                CommandType = CommandType.Text,
+                CommandText = "Select * from Categories",
+            };
+
+            connection.Open();
+            var reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Console.WriteLine($"Id : {reader["Id"]} ");
+            }
+
+
+            connection.Close();
+            Console.WriteLine(connection.State);
+        }
+
+        public void ReaderSample()
+        {
+            SqlCommand command = new SqlCommand
+            {
+                Connection = connection,
+                CommandType = CommandType.Text,
+                CommandText = "Select * from Categories",
+            };
+
+            connection.Open();
+            var reader = command.ExecuteReader();
+            Console.WriteLine(reader.FieldCount);
+            
+            while(reader.Read())
+            {
+                for(int i = 0; i < reader.FieldCount; i++)
+                {
+                    Console.Write(reader.GetName(i));
+                    Console.Write("\t");
+                }
+            }
         }
     }
 }
