@@ -215,5 +215,42 @@ namespace ADOSamples
             int result = command.ExecuteNonQuery();
             Console.WriteLine($"Affected row {result}");
         }
+
+        public void AddTransactional(string categoryName, int categoryId, string productName, string description, int price)
+        {
+            SqlTransaction transaction = null;
+            SqlCommand AddProduct = new SqlCommand
+            {
+                Connection = connection,
+                CommandType = CommandType.Text,
+                CommandText = $"insert into products(CategoryId,ProductName,Description,Price) values ({categoryId},'{productName}','{description}',{price})"
+            };
+            SqlCommand AddCategory = new SqlCommand
+            {
+                Connection = connection,
+                CommandType = CommandType.Text,
+                CommandText = $"insert into Categories(CategoryName) values ('{categoryName}')"
+            };
+
+
+            connection.Open();
+            try
+            {
+                transaction = connection.BeginTransaction();
+                int result = AddProduct.ExecuteNonQuery();
+                result += AddCategory.ExecuteNonQuery();
+                transaction.Commit();
+                Console.WriteLine($"Affected row {result}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                transaction.Rollback();
+            }
+
+
+
+        }
+
     }
 }
