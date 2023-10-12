@@ -168,5 +168,52 @@ namespace ADOSamples
             int result = command.ExecuteNonQuery();
             Console.WriteLine($"Affected row is {result}");
         }
+
+        public void AddProductParameter(int categoryId, string productName, string description, int price)
+        {
+            SqlParameter categoryIdParam = new SqlParameter
+            {
+                ParameterName = "@CategoryId",
+                DbType = DbType.Int32,
+                Direction = ParameterDirection.Input,
+                Value = categoryId
+            };
+            SqlParameter productNameParam = new SqlParameter
+            {
+                ParameterName = "@productName",
+                DbType = DbType.String,
+                Direction = ParameterDirection.Input,
+                Value = productName
+            };
+            SqlParameter descriptionParam = new SqlParameter
+            {
+                ParameterName = "@description",
+                DbType = DbType.String,
+                Direction = ParameterDirection.Input,
+                Value = description
+            };
+            SqlParameter priceParam = new SqlParameter
+            {
+                ParameterName = "@price",
+                DbType = DbType.Int32,
+                Direction = ParameterDirection.Input,
+                Value = price
+            };
+
+            SqlCommand command = new SqlCommand
+            {
+                Connection = connection,
+                CommandType = CommandType.Text,
+                CommandText = $"insert into products(CategoryId,ProductName,Description,Price) values (@CategoryId,@productName,@description,@price)"
+            };
+
+            command.Parameters.Add(categoryIdParam);
+            command.Parameters.Add(productNameParam);
+            command.Parameters.Add(descriptionParam);
+            command.Parameters.Add(priceParam);
+            connection.Open();
+            int result = command.ExecuteNonQuery();
+            Console.WriteLine($"Affected row {result}");
+        }
     }
 }
