@@ -116,9 +116,42 @@ namespace ADOSamples
                 for(int i = 0; i < reader.FieldCount; i++)
                 {
                     Console.Write(reader.GetName(i));
+                    Console.Write(":");
+                    Console.WriteLine(reader.GetValue(i));
                     Console.Write("\t");
                 }
+                Console.WriteLine();
             }
+        }
+
+        public void MultipleReaderSample()
+        {
+            SqlCommand command = new SqlCommand
+            {
+                Connection = connection,
+                CommandType = CommandType.Text,
+                CommandText = "Select * from Categories; Select * from Product",
+            };
+
+            connection.Open();
+            var reader = command.ExecuteReader();
+            Console.WriteLine(reader.FieldCount);
+            do
+            {
+                while (reader.Read())
+                {
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        Console.Write(reader.GetName(i));
+                        Console.Write(":");
+                        Console.WriteLine(reader.GetValue(i));
+                        Console.Write("\t");
+                    }
+                    Console.WriteLine();
+                }
+                Console.WriteLine();
+            }while (reader.NextResult());
+            
         }
     }
 }
