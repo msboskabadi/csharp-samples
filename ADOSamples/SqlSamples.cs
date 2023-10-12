@@ -153,5 +153,20 @@ namespace ADOSamples
             }while (reader.NextResult());
             
         }
+
+        public void AddProduct(int categoryId, string productName, string description, int price)
+        {
+            SqlCommand command = new SqlCommand
+            {
+                Connection = connection,
+                CommandType = CommandType.Text,
+                CommandText = $"insert into products(CategoryId, ProductName, Description, Price) values ({categoryId}, '{productName}', '{description}', {price})",
+            };
+
+            connection.Open();
+
+            int result = command.ExecuteNonQuery();
+            Console.WriteLine($"Affected row is {result}");
+        }
     }
 }
