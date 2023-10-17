@@ -12,7 +12,7 @@ namespace ConcurrencySample
         {
             for (int i = 0; i < 1000; i++)
             {
-                Console.WriteLine("*");
+                Console.Write("*");
             }
         }
 
@@ -20,8 +20,9 @@ namespace ConcurrencySample
         {
             for (int i = 0; i < 1000; i++)
             {
-                Console.WriteLine("-");
+                Console.Write("-");
             }
+            Console.WriteLine(Thread.CurrentThread.IsAlive);
         }
     }
 }
