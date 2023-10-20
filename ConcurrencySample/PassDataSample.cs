@@ -32,5 +32,14 @@ namespace ConcurrencySample
         {
             Console.WriteLine($"{firstName} {lastName}");
         }
+
+        public void PrintNumber()
+        {
+            for(int i = 0; i < 10; i++)
+            {
+                int temp = i;
+                new Thread(() => Console.WriteLine(temp)).Start();
+            }
+        }
     }
 }
