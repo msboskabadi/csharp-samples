@@ -2,7 +2,6 @@
 
 using ConcurrencySample;
 
-
-ThreadSamples ts = new ThreadSamples();
-ts.JoinSample();
+SharedLocalState sls = new SharedLocalState();  
+sls.Start();
 Console.ReadKey();
