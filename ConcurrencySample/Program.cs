@@ -2,6 +2,6 @@
 
 using ConcurrencySample;
 
-PassDataSample sample = new PassDataSample();  
-sample.Start();
+ExceptionInThread sample = new ExceptionInThread();  
+sample.StartWithExceptionHandling();
 Console.ReadKey();
