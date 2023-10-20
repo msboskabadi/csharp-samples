@@ -2,6 +2,6 @@
 
 using ConcurrencySample;
 
-SharedLocalState sls = new SharedLocalState();  
-sls.Start();
+PassDataSample sample = new PassDataSample();  
+sample.Start();
 Console.ReadKey();
