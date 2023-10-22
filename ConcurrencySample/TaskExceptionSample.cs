@@ -17,7 +17,7 @@ namespace ConcurrencySample
 
                 Console.WriteLine(badMethod.Result.ToString());
             }
-            catch (Exception ex)
+            catch (AggregateException ex)
             {
                 Console.WriteLine("error");
             }
