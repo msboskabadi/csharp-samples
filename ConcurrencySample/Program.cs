@@ -7,6 +7,6 @@ using ConcurrencySample;
 //Console.ReadKey();
 
 
-RunTaskSamples sample = new RunTaskSamples();
+TaskExceptionSample sample = new TaskExceptionSample();
 
 sample.Start(); 
