@@ -118,5 +118,22 @@ namespace ConcurrencySample
             await Task.Delay(20000, token);
             Console.WriteLine(message);
         }
+
+        public async Task PrintAfter3()
+        {
+            await Task.Delay(4950);
+            Console.WriteLine("Print After 3 Finished");
+        }
+        public async Task PrintAfter4()
+        {
+            await Task.Delay(5000);
+            Console.WriteLine("Print After 4 Finished");
+        }
+
+        public async Task PrintAfter5()
+        {
+            await Task.Delay(5050);
+            Console.WriteLine("Print After 5 Finished");
+        }
     }
 }
