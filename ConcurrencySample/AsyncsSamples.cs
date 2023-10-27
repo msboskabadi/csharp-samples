@@ -107,6 +107,10 @@ namespace ConcurrencySample
             Console.WriteLine("Done");
         }
 
-
+        public async Task Print(string message)
+        {
+            await Task.Delay(3000);
+            Console.WriteLine(message);
+        }
     }
 }
