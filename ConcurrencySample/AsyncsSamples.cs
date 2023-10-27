@@ -112,5 +112,11 @@ namespace ConcurrencySample
             await Task.Delay(3000);
             Console.WriteLine(message);
         }
+
+        public async Task PrintAfter20Seconds(string message, CancellationToken token)
+        {
+            await Task.Delay(20000, token);
+            Console.WriteLine(message);
+        }
     }
 }
