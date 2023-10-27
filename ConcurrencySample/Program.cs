@@ -7,6 +7,10 @@ using ConcurrencySample;
 //Console.ReadKey();
 
 
-CountiutionSample sample = new CountiutionSample();
+//CountiutionSample sample = new CountiutionSample();
 
-sample.Start2(); 
+//sample.Start2(); 
+
+AsyncsSamples sample = new AsyncsSamples();
+
+sample.DisplayPrimeNumeV1();
